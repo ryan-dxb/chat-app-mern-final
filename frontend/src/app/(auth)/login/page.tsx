@@ -1,5 +1,7 @@
 import React from "react";
 import { NextPage } from "next";
+import AuthFormLayout from "@/components/auth/common/AuthFormLayout";
+import LoginForm from "./loginForm";
 
 interface LoginPageProps {
   // Add your prop types here
@@ -7,10 +9,19 @@ interface LoginPageProps {
 
 const LoginPage: NextPage<LoginPageProps> = () => {
   return (
-    <div>
-      <h1>Hello, Next.js!</h1>
+    <AuthFormLayout
+      title="Welcome Back !"
+      subtitle="Enter your credentials or use social login to continue..."
+      footerText="Don't have an account?"
+      footerLink="/register"
+      footerLinkText="Register"
+      social
+    >
+      <div className="my-6">
+        <LoginForm />
+      </div>
       {/* Add your page content here */}
-    </div>
+    </AuthFormLayout>
   );
 };
 
