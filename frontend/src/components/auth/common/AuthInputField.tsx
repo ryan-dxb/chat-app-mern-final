@@ -25,7 +25,7 @@ const AuthInputField: FC<AuthInputFieldProps> = ({
             value={value}
             ref={ref}
             placeholder={placeholder}
-            className="h-10 bg-transparent border border-primary/60 hover:bg-primary/10 hover:border-primary/80 transition-colors duration-200"
+            className="h-10 bg-transparent border  hover:bg-primary/10 hover:border-primary/80 transition-colors duration-200"
           />
         </FormControl>
       )}

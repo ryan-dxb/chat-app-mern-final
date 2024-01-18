@@ -15,7 +15,7 @@ const AuthSocialButton: FC<AuthSocialButtonProps> = ({
 }) => {
   return (
     <Button
-      className="h-10 w-full bg-transparent border border-primary/60 hover:bg-primary/10 hover:border-primary/80 transition-colors duration-200"
+      className="h-10 w-full bg-transparent border  hover:bg-primary/10 hover:border-primary/80 transition-colors duration-200"
       variant="outline"
       onClick={onClick}
     >

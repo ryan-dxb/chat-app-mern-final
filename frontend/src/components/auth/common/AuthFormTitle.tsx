@@ -14,7 +14,7 @@ const AuthFormTitle: FC<AuthFormTitleProps> = ({
       <h1 className="text-xl font-bold tracking-tight text-center text-primary">
         {title}
       </h1>
-      <p className="text-center text-sm text-muted-foreground">{subtitle}</p>
+      <p className="text-sm text-muted-foreground">{subtitle}</p>
     </div>
   );
 };
