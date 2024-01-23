@@ -11,8 +11,13 @@ interface NavbarButtonProps {
 
 const NavbarButton: FC<NavbarButtonProps> = ({ className, icon: Icon }) => {
   return (
-    <Button className={cn("", className)}>
-      <Icon className="w-5 h-5" />
+    <Button
+      className={cn(
+        "h-11 w-11 p-0 rounded-md bg-slate-100 text-slate-600 hover:text-primary-foreground hover:bg-primary transition duration-300 ease-in-out ",
+        className
+      )}
+    >
+      <Icon className="w-5 h-5 " />
     </Button>
   );
 };
