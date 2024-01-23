@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import Navbar from "../navbar/page";
-import Sidebar from "../sidebar/page";
+import Sidebar from "../left-sidebar/page";
+import LeftSidebar from "../left-sidebar/page";
+import RightSidebar from "../right-sidebar/page";
 
 interface AppWrapperProps {
   // Add your prop types here
@@ -9,12 +11,15 @@ interface AppWrapperProps {
 
 const AppWrapper: FC<AppWrapperProps> = ({ children }) => {
   return (
-    <main className="flex flex-row h-[100vh] overflow-hidden">
-      <div className="flex flex-row">
+    <main className="flex flex-col h-[100vh] overflow-hidden">
+      <nav>
         <Navbar />
-        <Sidebar />
+      </nav>
+      <div className="flex h-full flex-row">
+        <LeftSidebar />
+        <div className="flex-1">{children}</div>
+        <RightSidebar />
       </div>
-      <div className="flex-1">{children}</div>
     </main>
   );
 };
