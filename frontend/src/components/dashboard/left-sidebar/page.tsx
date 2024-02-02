@@ -13,7 +13,7 @@ const LeftSidebar: FC<LeftSidebarProps> = () => {
   return (
     <div className="flex flex-col flex-shrink-0 w-64 border-r p-4">
       <div className="flex flex-row justify-between w-full items-center ">
-        <h3 className="text-xl font-semibold text-muted-foreground">Chats</h3>
+        <h3 className="text- font-semibold text-muted-foreground">Chats</h3>
         <div className="ml-auto">
           <Button
             variant="ghost"
