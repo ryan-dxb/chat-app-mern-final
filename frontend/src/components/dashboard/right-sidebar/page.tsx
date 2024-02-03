@@ -29,10 +29,10 @@ const RightSidebar: FC<RightSidebarProps> = ({ open }) => {
     <motion.div
       animate={{ width: open ? 0 : 300 }}
       transition={{ duration: 0.3 }}
-      className="border-l flex flex-shrink-0 h-full w-0 box-border"
+      className="border-l flex flex-shrink-0  h-full w-0 box-border"
     >
-      <div className="h-[calc(100vh-64px)] ">
-        <ScrollArea className="w-full flex-1 h-full ">
+      <div className="h-[calc(100vh-70px)]  pb-2">
+        <ScrollArea className="w-full flex-1 h-full">
           <div className="relative flex flex-1 h-36 bg-gray-100">
             {/* Cover Image */}
             <div
@@ -112,15 +112,17 @@ const RightSidebar: FC<RightSidebarProps> = ({ open }) => {
             {Array.from({ length: 20 }).map((_, i) => (
               <div
                 key={i}
-                className="flex flex-row h-12 gap-3  rounded-md w-full items-center px-2 border border-slate-100 hover:bg-slate-100 transition duration-300 ease-in-out"
+                className="flex flex-row h-12 gap-3 group  rounded-md w-full items-center px-2 border  hover:bg-primary transition duration-300 ease-in-out"
               >
                 <div className="flex items-center justify-center h-8 w-8 rounded-full bg-green-100">
                   <FaRegFileAlt className="w-4 h-4 text-green-500 font-normal" />
                 </div>
                 <div className="flex flex-1 flex-row justify-between">
                   <div className="flex flex-1 flex-shrink-0 flex-col justify-center overflow-hidden">
-                    <span className="text-xs font-semibold">File Name</span>
-                    <span className="text-xs text-slate-400">1.2MB</span>
+                    <span className="text-xs font-semibold ">File Name</span>
+                    <span className="text-xs text-slate-400 group-hover:text-slate-300">
+                      1.2MB
+                    </span>
                   </div>
                   <div className="flex flex-row gap-1 items-center justify-end">
                     <Button

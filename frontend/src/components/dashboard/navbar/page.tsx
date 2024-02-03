@@ -11,8 +11,11 @@ import {
   MdOutlineSettings,
   MdOutlineMessage,
 } from "react-icons/md";
+import { BsPersonAdd } from "react-icons/bs";
+
 import ProfileAvatar from "../common/ProfileAvatar";
 import ThemeToggle from "../common/ThemeToggle";
+import FriendRequestModal from "@/components/modals/FriendRequestModal";
 
 interface NavbarProps {
   // Add your prop types here
@@ -26,7 +29,12 @@ const Navbar: FC<NavbarProps> = () => {
       </div>
       <div className=" flex flex-row space-x-2 ml-4">
         <NavbarButton className="" icon={MdOutlineMessage} />
-        <NavbarButton className="" icon={MdOutlineManageAccounts} />
+        <FriendRequestModal>
+          {/* <NavbarButton className="" icon={BsPersonAdd} /> */}
+          <Button className="h-11 w-11 p-0 rounded-md bg-slate-100 text-slate-600 hover:text-primary-foreground hover:bg-primary transition duration-300 ease-in-out ">
+            <BsPersonAdd className="w-5 h-5 " />
+          </Button>
+        </FriendRequestModal>
       </div>
 
       <div className="ml-auto h-11 flex-row flex space-x-2">

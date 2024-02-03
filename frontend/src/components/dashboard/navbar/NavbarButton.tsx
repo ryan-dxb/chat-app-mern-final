@@ -8,6 +8,7 @@ interface NavbarButtonProps {
   className?: string;
   icon?: IconType;
   children?: React.ReactNode;
+  onclick?: () => void;
 }
 
 const NavbarButton: FC<NavbarButtonProps> = ({

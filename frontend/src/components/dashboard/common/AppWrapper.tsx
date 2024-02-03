@@ -24,10 +24,7 @@ const AppWrapper: FC<AppWrapperProps> = ({ children }) => {
       </nav>
       <div className="flex h-full flex-row">
         <LeftSidebar />
-        <div className="flex-1 ">
-          <Button onClick={() => setOpen(!open)}>Toggle Sidebar</Button>
-          {children}
-        </div>
+        <div className="flex-1">{children}</div>
         <RightSidebar open={open} />
       </div>
     </main>
