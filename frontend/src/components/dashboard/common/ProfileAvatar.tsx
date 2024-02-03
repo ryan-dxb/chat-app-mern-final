@@ -26,7 +26,7 @@ const ProfileAvatar: FC<ProfileAvatarProps> = ({ size = "md" }) => {
           size === "lg" && "h-12 w-12"
         )}
       >
-        <AvatarFallback className="rounded-md hover:text-primary-foreground hover:bg-primary transition duration-300 ease-in-out">
+        <AvatarFallback className="rounded-md bg-slate-100 hover:text-primary-foreground hover:bg-primary transition duration-300 ease-in-out">
           <span>JD</span>
         </AvatarFallback>
       </Avatar>

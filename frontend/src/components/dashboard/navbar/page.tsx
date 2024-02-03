@@ -12,6 +12,7 @@ import {
   MdOutlineMessage,
 } from "react-icons/md";
 import ProfileAvatar from "../common/ProfileAvatar";
+import ThemeToggle from "../common/ThemeToggle";
 
 interface NavbarProps {
   // Add your prop types here
@@ -19,8 +20,8 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = () => {
   return (
-    <div className="flex flex-1 items-center px-4 h-16 flex-shrink-0 border-b">
-      <div className="flex flex-row flex-shrink-0 w-60 h-full border-r  items-center justify-center">
+    <div className="flex flex-1 items-center pr-4 h-16 flex-shrink-0 border-b">
+      <div className="flex flex-row flex-shrink-0 w-80 h-full border-r  items-center justify-center">
         <Logo />
       </div>
       <div className=" flex flex-row space-x-2 ml-4">
@@ -32,6 +33,7 @@ const Navbar: FC<NavbarProps> = () => {
         <NavbarButton className="" icon={MdOutlineDashboardCustomize} />
         <NavbarButton className="" icon={MdNotifications} />
         <NavbarButton className="" icon={MdOutlineSettings} />
+        <ThemeToggle />
         <ProfileAvatar />
       </div>
     </div>

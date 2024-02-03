@@ -5,11 +5,16 @@ import { IconType } from "react-icons";
 
 interface NavbarButtonProps {
   // Add your prop types here
-  className: string;
-  icon: IconType;
+  className?: string;
+  icon?: IconType;
+  children?: React.ReactNode;
 }
 
-const NavbarButton: FC<NavbarButtonProps> = ({ className, icon: Icon }) => {
+const NavbarButton: FC<NavbarButtonProps> = ({
+  className,
+  icon: Icon,
+  children,
+}) => {
   return (
     <Button
       className={cn(
@@ -17,7 +22,8 @@ const NavbarButton: FC<NavbarButtonProps> = ({ className, icon: Icon }) => {
         className
       )}
     >
-      <Icon className="w-5 h-5 " />
+      {Icon && <Icon className="w-5 h-5 " />}
+      {children}
     </Button>
   );
 };

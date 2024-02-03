@@ -27,7 +27,7 @@ interface RightSidebarProps {
 const RightSidebar: FC<RightSidebarProps> = ({ open }) => {
   return (
     <motion.div
-      animate={{ width: open ? 0 : 256 }}
+      animate={{ width: open ? 0 : 300 }}
       transition={{ duration: 0.3 }}
       className="border-l flex flex-shrink-0 h-full w-0 box-border"
     >
